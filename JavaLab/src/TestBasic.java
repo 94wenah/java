@@ -2,10 +2,10 @@
 public class TestBasic {
 	public static void main(String[] args) {
 //  宣告 型態 變數名	
-		int salary; //宣告會產生記憶體的空間
-		salary = 20000; //給值
-		salary = 400000; //給值可以給多次，但宣告的名稱不能重複 
-		System.out.println("薪水=" + salary); //取值
+//		int salary; //宣告會產生記憶體的空間
+//		salary = 20000; //給值
+//		salary = 400000; //給值可以給多次，但宣告的名稱不能重複 
+//		System.out.println("薪水=" + salary); //取值
 		
 		long salaryOfMary=21000000000000L; //超過21e結尾要加L
 		int overflow=2000000000+2000000000; //20e+20e
@@ -67,5 +67,27 @@ public class TestBasic {
 	   //&0 0 1 0
 		//----------
 		//0 0 0 0
+		age=10;
+//		age++;
+		System.out.println("age=" + age++);
+		//加號放後面跟其他程式一起執行，會晚作加1
+		System.out.println(age);
+		System.out.println("age=" + age++ + ",age="+age); //不好理解
+		
+		b+=a;
+		b=(int)(b+a); //強制轉型
+		System.out.println("b=" + b);
+		System.out.println(age >= 18 ? "成年" : "未成年");
+		age=40;
+		System.out.println(age >= 18 ? (age>30 ? "壯年":"成年") : "未成年");
+		
+		int sales=2000;
+		double salary=100;
+		salary=sales > 1000 ? salary*1.1 : salary*0.9 ;
+		                      //預設小數點為double，如要用float小數點後面要加f ex 0.1f
+		System.out.println("薪水=" + salary);
+		
+
+		
 	}
 }
